@@ -5,31 +5,31 @@
 class GitHooks < Formula
   desc ""
   homepage "https://github.com/lvrach/git-hooks/"
-  version "0.0.1-rc-6"
+  version "0.1.4"
 
   depends_on "git"
   depends_on "gitleaks" => :optional
 
   on_macos do
     on_intel do
-      url "https://github.com/lvrach/git-hooks/releases/download/v0.0.1-rc-6/git-hooks_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy,
+      url "https://github.com/lvrach/git-hooks/releases/download/v0.1.4/git-hooks_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy,
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "d7d8e369d4514da9853f80a36b62356d2df3188057b62d5a58ffe7848b92636e"
+      sha256 "e0c0d2efd03dd59b0e5107a19a4df5f0b32404ada76aaa03f8d472f24062029c"
 
       def install
         bin.install "git-hooks"
       end
     end
     on_arm do
-      url "https://github.com/lvrach/git-hooks/releases/download/v0.0.1-rc-6/git-hooks_Darwin_arm64.tar.gz", using: CurlDownloadStrategy,
+      url "https://github.com/lvrach/git-hooks/releases/download/v0.1.4/git-hooks_Darwin_arm64.tar.gz", using: CurlDownloadStrategy,
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "17fe5608182f3a9f7dee95500eb93f580e8caee6a193f8c811fbbf527637d4e1"
+      sha256 "3f6affd067a437b2ac5e456097ada1e27b036ff5137719fbc18e222e6e963308"
 
       def install
         bin.install "git-hooks"
@@ -40,12 +40,12 @@ class GitHooks < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/lvrach/git-hooks/releases/download/v0.0.1-rc-6/git-hooks_Linux_x86_64.tar.gz", using: CurlDownloadStrategy,
+        url "https://github.com/lvrach/git-hooks/releases/download/v0.1.4/git-hooks_Linux_x86_64.tar.gz", using: CurlDownloadStrategy,
           headers: [
             "Accept: application/octet-stream",
             "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
           ]
-        sha256 "9176b48a2b5f1d31e4524279f5b0b6fe7c38649fd56c21038198624c5bffcd79"
+        sha256 "a6ac75811f9ba968c600a957f041e6cf574ae1aaf0179b24a0e4a1620bf976c4"
 
         def install
           bin.install "git-hooks"
@@ -54,12 +54,12 @@ class GitHooks < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/lvrach/git-hooks/releases/download/v0.0.1-rc-6/git-hooks_Linux_arm64.tar.gz", using: CurlDownloadStrategy,
+        url "https://github.com/lvrach/git-hooks/releases/download/v0.1.4/git-hooks_Linux_arm64.tar.gz", using: CurlDownloadStrategy,
           headers: [
             "Accept: application/octet-stream",
             "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
           ]
-        sha256 "52ba0b23c2865ebb79e7a6771eb33c2c0b2825e0b9cf718c5acf2af75570a288"
+        sha256 "a1f8bebd07222d1e31ddc1473045c106ae196e6e56970bf08ef95f563bc54020"
 
         def install
           bin.install "git-hooks"
